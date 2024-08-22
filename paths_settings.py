@@ -44,6 +44,14 @@ with open(file= str(pathlib.Path(PATH, "languages.csv")),
     START = next(reader)[LANG]
     PROGRESS = next(reader)[LANG]
     CLOSE = next(reader)[LANG]
+    NOT_COVER_TITLE = next(reader)[LANG]
+    NOT_COVER = next(reader)[LANG]
+    NOT_MUSIC_FILES_TITLE = next(reader)[LANG]
+    NOT_MUSIC_FILES = next(reader)[LANG]
+    NUM_OF_MUSIC_FILES_AND_TITLE_NOT_EQUAL_TITLE = next(reader)[LANG]
+    NUM_OF_MUSIC_FILES_AND_TITLE_NOT_EQUAL = next(reader)[LANG]
+    TXT_CONTAIN = next(reader)[LANG]
+    FOLDER_CONTAIN = next(reader)[LANG]
 
 
 def change_language(choosen_lang):

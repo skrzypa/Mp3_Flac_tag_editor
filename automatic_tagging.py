@@ -24,7 +24,10 @@ class AutomaticTagging:
         self.folder_path = pathlib.Path(tracklist_file_path).parent
         self.tracklist_file = tracklist_file_path
 
-        self.music_files, self.music_files_formats = [], []
+        self.music_files = []
+        self.music_files_formats = []
+        self.cover_file = None
+        self.titles = []
 
         for file in self.folder_path.iterdir():
             file = str(file)
@@ -47,7 +50,6 @@ class AutomaticTagging:
 
     def _read_tracklist_file(self):
         
-        self.titles = []
         with open(self.tracklist_file, mode= 'r', encoding= "UTF-8") as tracklist:
             reader = [row.strip() for row in tracklist.readlines()]
             
